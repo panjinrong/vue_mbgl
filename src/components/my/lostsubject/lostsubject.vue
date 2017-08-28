@@ -50,14 +50,12 @@
 	export default {
 		props: {
 			km:{
-				type：number,
+				type:Number,
 				default:2
 			}
-		}
+		},
 		data(){
-			return {
-				km:0
-			}
+			
 		},
 	}
 </script>
