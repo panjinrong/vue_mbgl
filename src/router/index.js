@@ -29,3 +29,4 @@ export default new Router({
   {path: '/lostsubject',component: lostsubject,meta:{title:"我的成绩"}}
   ]
 })
+// xx
