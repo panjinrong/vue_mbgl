@@ -9,7 +9,9 @@ import ranking from '@/components/ranking/index'
 import week from '@/components/ranking/week'
 import month from '@/components/ranking/month'
 import count from '@/components/ranking/count'
-
+import studyplan from '@/components/my/studyplan/studyplan'
+import mygrades from '@/components/my/mygrades/mygrades'
+import lostsubject from '@/components/my/lostsubject/lostsubject'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -21,6 +23,9 @@ export default new Router({
     	children:[{path: '/ranking/week',name: 'week',component: week},
 			       {path: '/ranking/month',name: 'month',component: month},
 			       {path: '/ranking/count',name: 'count',component: count}]
-	}
+	},
+  {path: '/studyplan',component: studyplan,meta:{title:"学习计划"}},
+  {path: '/mygrades',component: mygrades,meta:{title:"我的成绩"}},
+  {path: '/lostsubject',component: lostsubject,meta:{title:"我的成绩"}}
   ]
 })
