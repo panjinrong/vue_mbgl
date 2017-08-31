@@ -9,15 +9,15 @@
    			<div class="wcqk">
 	   			<div class="ywc">
 	   				<span>6</span>
-	   				<router-link to="/xymb">已完成</router-link>
+	   				<router-link to="/completed">已完成</router-link>
 	   			</div>
 	   			<div class="wwc">
 	   				<span>6</span>
-	   				<router-link to="/xymb">未完成</router-link>
+	   				<router-link to="/incompleted">未完成</router-link>
 	   			</div>
 	   			<div class="jy">
 	   				<span>6</span>
-	   				<router-link to="/xymb">加油</router-link>
+	   				<router-link to="/fight">加油</router-link>
 	   			</div>
    			</div>
    		</div>
@@ -27,21 +27,23 @@
    		<span></span><h5>毕业目标</h5>
    	</div>
 	<div class="bp">
-		<img src="./../../assets/image/bp.png">
-		<span>276</span>
-		<p>我的学分</p>
+		<div>
+			<img src="./../../assets/image/biaopan.png">
+			<span>276</span>
+			<p>我的学分</p>
+		</div>
 	</div>
 	<div class="xf">
 		<div class="xxjh">
-			<img src="./../../assets/image/set.png">
+			<img src="./../../assets/image/jh.png">
 			<router-link to="/studyplan">学习计划</router-link>
 		</div>
 		<div class="wdcj">
-			<img src="./../../assets/image/set.png">
+			<img src="./../../assets/image/cj.png">
 			<router-link to="/mygrades">我的成绩</router-link>
 		</div>
 		<div class="ygkm">
-			<img src="./../../assets/image/set.png">
+			<img src="./../../assets/image/gk.png">
 			<router-link to="/lostsubject">已挂科目</router-link>
 		</div>
 	</div>
@@ -52,23 +54,33 @@
 	</div>
     <div class="mbfl">
    		<ul>
-   			<li> <span @click="hideXymbList">学院目标</span></li>
-   			<li> <span @click="showGrmbList">个人目标</span></li>
+   			<li> <span :class="{'active' : xymbListShow===true}" @click="hideXymbList">学院目标</span></li>
+   			<li> <span :class="{'active' : grmbListShow===true}" @click="showGrmbList">个人目标</span></li>
    		</ul>
    	</div>
-   	<div v-show="xymbListShow" class="xymb-list">
-   		学院目标学院目标学院目标
+   	<div v-show="xymbListShow" class="xymb-list">		
+		<v-college></v-college>
    	</div>
    	<div v-show="grmbListShow" class="grmb-list">
-   		个人目标个人目标个人目标
+   		<v-personal></v-personal>
    	</div>
    </div>
 </div>
 </template>
 <script>
+import collegegoal from './collegegoal/collegegoal'
+import personalgoal from './personalgoal/personalgoal'
 const mun=0;
+const all = 2;
 export default {
  	name: 'wd_detail',
+ 	components:{
+		'v-college':collegegoal,
+		'v-personal':personalgoal
+	},
+ 	props: {
+ 	
+ 	},
  	data(){
 	  	return{
 	  		xymbListShow:true,
@@ -84,6 +96,11 @@ export default {
 			this.xymbListShow=false;
 			this.grmbListShow=true;
 		}
+	},
+	computed: {
+		
+	},
+	created() {
 	}
 
 }
@@ -134,14 +151,14 @@ export default {
 	font-size: 11px;
 	color:#ffffff;
 }
-.bymb{
-	margin: .4em 0;
-	background: #ffffff;
-}
+/* .bymb{
+	margin: .4em 0 3.2em;
+} */
 .bymb-nr{
 	background: #ffffff;
 	border-bottom: 1px solid #eeeeee;
 	text-align: left;
+	margin-top: .4em;
 }
 .bymb-nr span{
 	display: inline-block;	
@@ -156,29 +173,34 @@ export default {
 	color: #333333;
 	line-height: 2.2em;
 	display: inline-block;
+	font-family: PingFang-SC-Bold;
 }
 .bp{
-	width: 14em;
-	margin: 1em auto 0;
+	background: #ffffff;
 	position: relative;
 }
-.bp span{
-	position: absolute;
-	left: 4em;
-	top: 3.5em;
-	font-size: 24px;
-	font-weight: bold;
+.bp div{
+	width: 14em;
+	margin:0 auto;
+	padding:1em 0;
 }
-.bp p{
-	position: absolute;
-	display: inline-block;
-	left: 7.5em;
-	bottom: 1.7em;
+.bp div span{
+	display: block;
+	font-family: FZYHJW--GB1-0;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: -2.3em;
+}
+.bp div p{
 	font-size: 12px;
 	color: #666666;
+	margin-top: .5em;
 }
-.bp img{
+.bp div img{
 	width:100%;
+}
+.xf{
+	background: #ffffff;
 }
 .xf>div{
 	display: inline-block;
@@ -207,11 +229,17 @@ export default {
 	margin-left: .6em;
 }
 .mbfl ul li span{
+	font-family: PingFang-SC-Bold;
 	color: #999999;
 	font-size: 14px;
+	padding: .2em;
 }
 .mbfl .router-link-active{
   color:#3da8f5!important;
   border-bottom: 1px solid #3da8f5;
+}
+.mbfl .active{
+	color:#3da8f5!important;
+    border-bottom: 1px solid #3da8f5;
 }
 </style>
