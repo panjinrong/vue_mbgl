@@ -25,7 +25,11 @@ export default {
 a{
 	text-decoration: none;
 }
+ul li{
+  list-style: none;
+}
 #my{
-	background: #f2f2f2;
+	background: #f7f7f7;
+  margin-bottom: 4em;
 }
 </style>
