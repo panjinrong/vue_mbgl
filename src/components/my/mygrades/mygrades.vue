@@ -24,51 +24,70 @@
 			</div>
 		</div>
 		<div class="xkfs">
-			<div class="chinese">
-				<span>98</span>
-				<p>语文</p>
+			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">语文</p>
 			</div>
-			<div class="eglish">
-				<span>98</span>
-				<p>大学英语1</p>
+			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">大学英语1</p>
 			</div>
-			<div class="physic">
-				<span>98</span>
-				<p>物理</p>
+			<div class="physic" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">物理</p>
 			</div>
-			<div class="computer">
-				<span>98</span>
-				<p>计算机</p>
+			<div class="computer" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">计算机</p>
 			</div>
-			<div class="chinese">
-				<span>98</span>
-				<p>语文</p>
+			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">语文</p>
 			</div>
-			<div class="eglish">
-				<span>98</span>
-				<p>大学英语2</p>
+			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">大学英语2</p>
 			</div>
-			<div class="physic">
-				<span>98</span>
-				<p>物理2</p>
+			<div class="physic" :class="{'active' :selectsubject}" @click="selectSubject">
+				<span :class="{'actives' :selectsubject}">98</span>
+				<p :class="{'actives' :selectsubject}">物理2</p>
 			</div>
-			<div class="computer">
+			<div class="computer" :class="{'active' :selectsubject}" @click.stop="selectSubject()">
 				<span><img src="./../../../assets/image/more.png"></span>
-				<p>更多</p>
-			</div>
+				<p :class="{'actives' :selectsubject}">更多</p>
+			</div> 
 		</div>
 	</div>
 </template>
 <script>
-	export default {}
+	export default {
+		props:{
+
+		},
+		data() {
+			return {
+				selectsubject:false
+			}
+		},
+		methods:{
+			selectSubject() {
+				this.selectsubject = !this.selectsubject;
+			}
+		}
+	}
 </script>
 <style>
 html,body{
 	height: 100%;
 }
+.active{
+	background: #65BFFF !important;
+}
+.actives{
+	color: white !important;
+}
 .wdcj-wrapper{
-	/* background: #f7f7f7; */
-	background: pink;
+	background: #f7f7f7; 
 	overflow: hidden;
 	height: 100%;
 }
@@ -114,7 +133,6 @@ html,body{
 	font-size: 25px;
 	display: inline-block;
 	width: calc(100%/4 - 0em);
-	background: #65BFFF;
 	height:3.8em; 
 	text-align: center;
 	vertical-align: middle;
