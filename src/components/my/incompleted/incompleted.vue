@@ -1,12 +1,12 @@
 <template>
   <div id="wwc-wrapper">
-	 <div class="mbfl-item">
+	<div class="mbfl-item">
 	 	<ul>
 	 		<li><router-link to="/incompleted/incollege">学校目标</router-link></li>
 	 		<li><router-link to="/incompleted/inpersonal">个人目标</router-link></li>
 	 	</ul>	 	
-	 </div>
-	 <router-view></router-view>
+	</div>
+	<router-view></router-view>
   </div>
 </template>
 

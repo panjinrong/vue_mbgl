@@ -7,18 +7,18 @@
    		<div class="msg">
    			<h4>张晓彤</h4>
    			<div class="wcqk">
-	   			<div class="ywc">
+	   			<router-link to="/completed" class="ywc">
 	   				<span>6</span>
-	   				<router-link to="/completed">已完成</router-link>
-	   			</div>
-	   			<div class="wwc">
+	   				<p>已完成</p>
+	   			</router-link>
+	   			<router-link to="/incompleted" class="wwc">
 	   				<span>6</span>
-	   				<router-link to="/incompleted">未完成</router-link>
-	   			</div>
-	   			<div class="jy">
+	   				<p>未完成</p>
+	   			</router-link>
+	   			<router-link to="/fight" class="jy">
 	   				<span>6</span>
-	   				<router-link to="/fight">加油</router-link>
-	   			</div>
+	   				<p>加油</p>
+	   			</router-link>
    			</div>
    		</div>
     </div>
@@ -34,18 +34,18 @@
 		</div>
 	</div>
 	<div class="xf">
-		<div class="xxjh">
+		<router-link to="/studyplan" class="xxjh">
 			<img src="./../../assets/image/jh.png">
-			<router-link to="/studyplan">学习计划</router-link>
-		</div>
-		<div class="wdcj">
+			<p>学习计划</p>
+		</router-link>
+		<router-link to="/mygrades" class="wdcj">
 			<img src="./../../assets/image/cj.png">
-			<router-link to="/mygrades">我的成绩</router-link>
-		</div>
-		<div class="ygkm">
+			<p>我的成绩</p>
+		</router-link>
+		<router-link to="/lostsubject" class="ygkm">
 			<img src="./../../assets/image/gk.png">
-			<router-link to="/lostsubject">已挂科目</router-link>
-		</div>
+			<p>已挂科目</p>
+		</router-link>
 	</div>
     <div class="wdmb">
 	   	<div class="bymb-nr">
@@ -136,11 +136,10 @@ export default {
 	margin-top: 1.3em;
 	text-align:left;
 }
-.msg .wcqk>div{
+.msg .wcqk>a{
 	display: inline-block;
-	margin-right:2.5em;
+	padding-right:3em;
 	text-align: center; 
-
 }
 .msg .wcqk span{
 	font-size: 14px;
@@ -201,18 +200,20 @@ export default {
 }
 .xf{
 	background: #ffffff;
+	padding-bottom: .5em;
 }
-.xf>div{
+.xf>a{
 	display: inline-block;
 	width: calc(100%/3 - .4em);
 	text-align: center;
 	padding: .1em 0;
 }
-.xf>div img{
+.xf>a img{
 	width: .7em;
 	vertical-align: middle;
 }
-.xf>div a{
+.xf>a p{
+	display: inline-block;
 	font-size: 12px;
 	color:#666666;
 }

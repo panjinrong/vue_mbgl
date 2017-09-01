@@ -19,10 +19,10 @@ import incompleted from '@/components/my/incompleted/incompleted'
 import incollege from '@/components/my/incompleted/incollege'
 import inpersonal from '@/components/my/incompleted/inpersonal'
 import fight from '@/components/my/fight/fight'
-/*import collegegoal from '@/components/my/collegegoal/collegegoaldetail'*/
 import collegegoaldetail from '@/components/my/collegegoaldetail/collegegoaldetail'
 import collegegoaldetail_dt from '@/components/my/collegegoal/collegegoaldetail-dt'
 import collegegoaldetail_xq from '@/components/my/collegegoal/collegegoaldetail-xq'
+import mbgc from '@/components/find/find_mbgc'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -50,7 +50,8 @@ export default new Router({
     children:[{path: '/incompleted/incollege',name: 'incollege',component: incollege},
              {path: '/incompleted/inpersonal',name: 'inpersonal',component: personal}]
   },
-  {path: '/fight',component: fight,meta:{title:"谁赞过我"}}
+  {path: '/fight',component: fight,meta:{title:"谁赞过我"}},
+  {path: '/find',component: mbgc,meta:{title:"目标广场"}},
   ]
 })
 const router = new Router();

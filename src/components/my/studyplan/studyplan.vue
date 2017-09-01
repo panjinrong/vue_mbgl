@@ -109,13 +109,13 @@ const num=0;
 	ul li{
 	  list-style: none;
 	}
-	.actives{
+	.xujh .actives{
 		color: #f8f8f8 !important;
 		background: #65BFFF !important;
 		font-size: 17px !important;
 		font-weight: bold;
 	}
-	.active{
+	.xujh .active{
 		color: #f8f8f8 !important;
 		background: #65BFFF !important;
 		font-weight: bold;
