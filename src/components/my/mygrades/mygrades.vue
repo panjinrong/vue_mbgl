@@ -80,10 +80,10 @@
 html,body{
 	height: 100%;
 }
-.active{
+.xkfs .active{
 	background: #65BFFF !important;
 }
-.actives{
+.xkfs .actives{
 	color: white !important;
 }
 .wdcj-wrapper{

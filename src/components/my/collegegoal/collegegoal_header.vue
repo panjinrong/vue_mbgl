@@ -74,7 +74,13 @@ export default {
 .collegedetail-mbgs .collegedetail-mbgs-img img{
 	height: .9em;
 }
-.collegedetail-mbgs .collegedetail-mbgs-wc{}
+.collegedetail-mbgs .collegedetail-mbgs-wc p{
+	background: #3da8f5;
+	color: #ffffff;
+	font-size: 13px;
+	border-radius: 6px;
+	padding: .1em .2em;
+}
 .collegedetail-mbgs .next{
 	float: right;
 }
