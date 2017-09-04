@@ -1,6 +1,6 @@
 <template>
   <div class="find-wrapper">
-   		<div class="find-list">
+   		<div class="find-list" @click="zycpShow()">
    			<div class="find-text">
    				<h3>职业测评</h3>
    				<p>根据你的性格规划职业</p>
@@ -9,7 +9,7 @@
    				<img src="./../../assets/image/testing.png">
    			</div>
    		</div>
-   		<div class="find-list">
+   		<div class="find-list" @click="xymbShow()">
    			<div class="find-text">
    				<h3>学院目标</h3>
    				<p>以目标的方式培育人才</p>
@@ -40,6 +40,12 @@ export default {
 	methods:{
 		mbgcShow:function(){
 			this.$router.push('./find_mbgc');
+		},
+		xymbShow:function(){
+			this.$router.push('./find_xymb');
+		},
+		zycpShow:function(){
+			this.$router.push('./find_zycp');
 		}
 	}
 }

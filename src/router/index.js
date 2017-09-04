@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import find from '@/components/find/index'
+import find_mbgc from '@/components/find/find_mbgc'
+import find_zycp from '@/components/find/find_zycp'
+import find_xymb from '@/components/find/find_xymb'
+import mbgc_zr from '@/components/find/find_mbgc_zrxq'
+import mbgc_zx from '@/components/find/find_mbgc_zxxq'
+import mbgl_cptm from '@/components/find/find_mbgc_cptm'
 import my from '@/components/my/index'
 import notice from '@/components/notice/index'
 import notice_xq from '@/components/notice/notice_xq'
@@ -22,7 +28,7 @@ import fight from '@/components/my/fight/fight'
 import collegegoaldetail from '@/components/my/collegegoaldetail/collegegoaldetail'
 import collegegoaldetail_dt from '@/components/my/collegegoal/collegegoaldetail-dt'
 import collegegoaldetail_xq from '@/components/my/collegegoal/collegegoaldetail-xq'
-import mbgc from '@/components/find/find_mbgc'
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -51,7 +57,13 @@ export default new Router({
              {path: '/incompleted/inpersonal',name: 'inpersonal',component: personal}]
   },
   {path: '/fight',component: fight,meta:{title:"谁赞过我"}},
-  {path: '/find',component: mbgc,meta:{title:"目标广场"}},
+  {path: '/find_mbgc',component: find_mbgc,redirect:'/find/find_mbgc_zrxq',meta:{title:"目标广场"},
+    children:[{path: '/find/find_mbgc_zrxq',name: 'mbgc_zr',component: mbgc_zr},
+             {path: '/find/find_mbgc_zxxq',name: 'mbgc_zx',component: mbgc_zx}]
+  },
+  {path: '/find_xymb',component: find_xymb,meta:{title:"学院目标"}},
+  {path: '/find_zycp',component: find_zycp,meta:{title:"职业测评"}},
+  {path: '/find_mbgc_cptm',name:'mbgl_cptm',component: mbgl_cptm},
   ]
 })
 const router = new Router();
