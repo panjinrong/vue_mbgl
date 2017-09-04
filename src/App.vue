@@ -13,7 +13,7 @@ export default {
 <style>
 @font-face{
   font-family: PingFang-SC-Medium;
-  src: url('./assets/icomoon/PingFang Medium.ttf');
+  src: url('./assets/icomoon/PingFang-Medium.ttf');
 }
 #app {
   font-family:PingFang-SC-Medium;
