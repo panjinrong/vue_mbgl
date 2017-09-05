@@ -12,7 +12,7 @@
  				<p>语言是交流的工具，英语还是无疑是世界上中重要的交流工具之一。学习是进步的阶梯，也是你开起世界大门的第一步，这里，我们将一起奋斗，一起努力，还是还是无疑是世界上最重要的工具之一</p>
  			</div>
  		</div>
- 		<div class="collegedetail-mbgs">
+ 		<div class="collegedetail-mbgs" @click="zmbShow()">
 			<div class="collegedetail-mbgs-img">
 				<img src="./../../../assets/image/Target.png">
 			</div>
@@ -28,7 +28,14 @@
 
 <script>
 export default {
-
+	data() {
+		return {}
+	},
+	methods:{
+		zmbShow:function(){
+			this.$router.push('./collegegoal_zmb');
+		}
+	}
 }
 </script>
 
@@ -78,8 +85,8 @@ export default {
 	background: #3da8f5;
 	color: #ffffff;
 	font-size: 13px;
-	border-radius: 6px;
-	padding: .1em .2em;
+	border-radius: 17px;
+	padding: .1em .5em;
 }
 .collegedetail-mbgs .next{
 	float: right;

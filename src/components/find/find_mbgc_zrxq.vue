@@ -115,7 +115,7 @@ export default {
 }
 .zrxq-list-up .list-up-msg a{
 	display: inline-block;
-	background: url(./../../assets/image/jiaru.png);
+	background: url(./../../assets/image/ljion.png);
 	width: 3.6em;
     height: 1.4em;
     background-size: 100% 100%;
