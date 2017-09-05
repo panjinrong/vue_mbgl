@@ -8,6 +8,10 @@ import find_xymb from '@/components/find/find_xymb'
 import mbgc_zr from '@/components/find/find_mbgc_zrxq'
 import mbgc_zx from '@/components/find/find_mbgc_zxxq'
 import mbgl_cptm from '@/components/find/find_mbgc_cptm'
+import mbgc_result from '@/components/find/mbgc_result'
+import mbgc_tjmb from '@/components/find/mbgc_tjmb'
+import xymb_xq from '@/components/find/find_xymb_xq'
+import mbgc_sycyz from '@/components/find/find_mbgc_sycyz'
 import my from '@/components/my/index'
 import notice from '@/components/notice/index'
 import notice_xq from '@/components/notice/notice_xq'
@@ -28,6 +32,8 @@ import fight from '@/components/my/fight/fight'
 import collegegoaldetail from '@/components/my/collegegoaldetail/collegegoaldetail'
 import collegegoaldetail_dt from '@/components/my/collegegoal/collegegoaldetail-dt'
 import collegegoaldetail_xq from '@/components/my/collegegoal/collegegoaldetail-xq'
+import collegegoal_zmb from '@/components/my/collegegoal/collegegoal_zmb'
+import collegegoal_zmb_xq from '@/components/my/collegegoal/collegegoal_zmb_xq'
 
 Vue.use(Router)
 export default new Router({
@@ -61,9 +67,15 @@ export default new Router({
     children:[{path: '/find/find_mbgc_zrxq',name: 'mbgc_zr',component: mbgc_zr},
              {path: '/find/find_mbgc_zxxq',name: 'mbgc_zx',component: mbgc_zx}]
   },
+  {path: '/collegegoal_zmb',component: collegegoal_zmb,meta:{title:"子目标"}},
+  {path: '/collegegoal_zmb_xq',component: collegegoal_zmb_xq,meta:{title:"子目标详情"}},
   {path: '/find_xymb',component: find_xymb,meta:{title:"学院目标"}},
   {path: '/find_zycp',component: find_zycp,meta:{title:"职业测评"}},
   {path: '/find_mbgc_cptm',name:'mbgl_cptm',component: mbgl_cptm},
+  {path: '/mbgc_result',name:'mbgc_result',component: mbgc_result},
+  {path: '/mbgc_tjmb',name:'mbgc_tjmb',component: mbgc_tjmb},
+  {path: '/find_xymb_xq',name:'xymb_xq',component: xymb_xq},
+  {path: '/find_mbgc_sycyz',component: mbgc_sycyz,meta:{title:"所有参与者"}},
   ]
 })
 const router = new Router();
