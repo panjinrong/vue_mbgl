@@ -82,11 +82,11 @@
           <button @click="preShow()">返回上一题</button>
           <button @click="nextShow()">确认</button>
       </div>
-      <div class="mbgc-cptm-diagle">
+      <div class="mbgc-cptm-diagle" v-show="sum>17">
           <div class="mbgc-cptm-main">
               <img src="./../../assets/image/wccp.png">
               <p>测评完成，即将显示测评结果！</p>
-              <button>确定</button>
+              <button @click="resultShow();">确定</button>
           </div>
       </div>
   </div>
@@ -117,6 +117,9 @@ export default {
       this.index=this.sum;
       this.selecedif = false;
       this.selecedelse = !this.selecedelse;
+    },
+    resultShow:function(){
+      this.$router.push('./mbgc_result');
     }
   },
   created(){

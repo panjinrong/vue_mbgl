@@ -64,7 +64,7 @@ export default {
 }
 .find-zycp-list .zycp-list-img>div{
   display: inline-block;
-  width:calc(100%/2 - .2em);
+  width:calc(100%/2 - .5em);
   padding: 2em 0;
 }
 .find-zycp-list .zycp-list-img div:nth-child(1) img{
