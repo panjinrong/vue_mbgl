@@ -70,25 +70,8 @@ export default {
   padding:.3em 0em .2em 0em;
   text-align: left;
 }
-.notice_not_btn{
-  display: inline-block;
-  height:2.5em;
-  padding:.3em 0em .2em 0em;
-  vertical-align: top;
-  float: right;
-}
-.notice_not_btn > span{
-  display: inline-block;
-  border:1px solid #c1c1c1;
-  background: #c1c1c1;
-  border-radius: 50%;
-  width:.2em;
-  height: .2em;
-  margin-right: .2em;
-  vertical-align:text-top;
-}
+
 .notice_not_content{
-  margin-left:3.5em;
   margin-top: 1em;
 }
 .notice_not_content_xq{

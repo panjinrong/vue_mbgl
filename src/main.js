@@ -4,7 +4,9 @@ require('./assets/icomoon/style.css');
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import swpie from 'photoswipe'
 Vue.use(require('vue-wechat-title'))
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
