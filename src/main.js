@@ -8,7 +8,9 @@ import jquery from 'jquery'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import swpie from 'photoswipe'
 Vue.use(require('vue-wechat-title'))
+
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 Vue.prototype.$jquery = jquery
