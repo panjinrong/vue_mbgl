@@ -24,45 +24,54 @@
 			</div>
 		</div>
 		<div class="xkfs">
-			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">语文</p>
+			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject(0)">
+				<span>98</span>
+				<p>语文</p>
 			</div>
-			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">大学英语1</p>
+			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject(1)">
+				<span>98</span>
+				<p>大学英语1</p>
 			</div>
-			<div class="physic" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">物理</p>
+			<div class="physic" :class="{'active' :selectsubject}" @click="selectSubject(2)">
+				<span>98</span>
+				<p>物理</p>
 			</div>
-			<div class="computer" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">计算机</p>
+			<div class="computer" :class="{'active' :selectsubject}" @click="selectSubject()">
+				<span>98</span>
+				<p>计算机</p>
 			</div>
-			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">语文</p>
+			<div class="chinese" :class="{'active' :selectsubject}" @click="selectSubject()">
+				<span>98</span>
+				<p>语文</p>
 			</div>
-			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">大学英语2</p>
+			<div class="eglish" :class="{'active' :selectsubject}" @click="selectSubject()">
+				<span>98</span>
+				<p>大学英语2</p>
 			</div>
-			<div class="physic" :class="{'active' :selectsubject}" @click="selectSubject">
-				<span :class="{'actives' :selectsubject}">98</span>
-				<p :class="{'actives' :selectsubject}">物理2</p>
+			<div class="physic" :class="gradeClass()" @click="selectSubject()">
+				<span>{{grade}}</span>
+				<p >物理2</p>
 			</div>
-			<div class="computer" :class="{'active' :selectsubject}" @click.stop="selectSubject()">
+			<div class="computer" @click.stop="selectSubject()">
 				<span><img src="./../../../assets/image/more.png"></span>
-				<p :class="{'actives' :selectsubject}">更多</p>
+				<p>更多</p>
 			</div> 
 		</div>
+		<div class="tjmb_title">
+			<img src="./../../../assets/image/juxing.png">
+			<h4>成绩分析</h4>
+		</div>
+		<v-bt></v-bt>
 	</div>
 </template>
 <script>
+import bt from './../lostsubject/lost_xq_bt'
 	export default {
 		props:{
-
+			grade:{
+				type:Number,
+				default:56
+			}
 		},
 		data() {
 			return {
@@ -70,9 +79,23 @@
 			}
 		},
 		methods:{
-			selectSubject() {
-				this.selectsubject = !this.selectsubject;
+			selectSubject(index) {
+					this.selectsubject = !this.selectsubject;
+			},
+			gradeClass() {
+				if(this.grade>60){
+					if(this.selectsubject === true){
+						return 'active'
+					}else{
+						return ' '
+					}
+				}else{
+					return 'actives'
+				}
 			}
+		},
+		components:{
+			'v-bt':bt
 		}
 	}
 </script>
@@ -83,8 +106,12 @@ html,body{
 .xkfs .active{
 	background: #65BFFF !important;
 }
-.xkfs .actives{
+.xkfs .active p,.xkfs .active span{
+
 	color: white !important;
+}
+.xkfs .actives p,.xkfs .actives span{
+	color: red !important;
 }
 .wdcj-wrapper{
 	background: #f7f7f7; 
@@ -153,5 +180,21 @@ html,body{
 	font-family: PingFang-SC-Medium;
 	font-size: 12px;
 	color: #5d5d5d;
+}
+.tjmb_title{
+	margin-top: .59em;
+	background:white;
+	padding: .4em 0;
+	text-align: left;
+}
+.tjmb_title img{
+	display: inline-block;
+	height: 1em;
+}
+.tjmb_title h4{
+	display: inline-block;
+	font-family: PingFang-SC-Bold;
+	font-size: 17px;
+	color: #333333;
 }
 </style>

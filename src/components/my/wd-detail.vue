@@ -32,6 +32,7 @@
 			<span>276</span>
 			<p>我的学分</p>
 		</div>
+		<!-- <div id="myChart-zb" :style="{width: '100%', height: '200px'}"></div> -->
 	</div>
 	<div class="xf">
 		<router-link to="/studyplan" class="xxjh">
@@ -54,8 +55,8 @@
 	</div>
     <div class="mbfl">
    		<ul>
-   			<li> <span :class="{'active' : xymbListShow===true}" @click="hideXymbList">学院目标</span></li>
-   			<li> <span :class="{'active' : grmbListShow===true}" @click="showGrmbList">个人目标</span></li>
+   			<li> <span :class="{'active' : xymbListShow}" @click="hideXymbList">学院目标</span></li>
+   			<li> <span :class="{'active' : grmbListShow}" @click="showGrmbList">个人目标</span></li>
    		</ul>
    	</div>
    	<div v-show="xymbListShow" class="xymb-list">		
@@ -95,7 +96,7 @@ export default {
 		showGrmbList() {
 			this.xymbListShow=false;
 			this.grmbListShow=true;
-		}
+		},
 	},
 	computed: {
 		
@@ -243,4 +244,7 @@ export default {
 	color:#3da8f5!important;
     border-bottom: 1px solid #3da8f5;
 }
+/* #myChart-zb {
+	background-image: url(./../../assets/image/biaopan.png);
+} */
 </style>

@@ -22,6 +22,7 @@ import count from '@/components/ranking/count'
 import studyplan from '@/components/my/studyplan/studyplan'
 import mygrades from '@/components/my/mygrades/mygrades'
 import lostsubject from '@/components/my/lostsubject/lostsubject'
+import lost_xq from '@/components/my/lostsubject/lost_xq'
 import completed from '@/components/my/completed/completed'
 import college from '@/components/my/completed/college'
 import personal from '@/components/my/completed/personal'
@@ -34,6 +35,12 @@ import collegegoaldetail_dt from '@/components/my/collegegoal/collegegoaldetail-
 import collegegoaldetail_xq from '@/components/my/collegegoal/collegegoaldetail-xq'
 import collegegoal_zmb from '@/components/my/collegegoal/collegegoal_zmb'
 import collegegoal_zmb_xq from '@/components/my/collegegoal/collegegoal_zmb_xq'
+import collegegoal_xg_end from '@/components/my/collegegoal/collegegoal_xg_end'
+import collegegoal_xg_cyz from '@/components/my/collegegoal/collegegoal_xg_cyz'
+import collegegoal_xg_yqcyz from '@/components/my/collegegoal/collegegoal_xg_yqcyz'
+import collegegoal_addcyz from '@/components/my/collegegoal/collegegoal_addcyz'
+import collegegoal_addcyz_xq from '@/components/my/collegegoal/collegegoal_addcyz_xq'
+import collegegoal_bz from '@/components/my/collegegoal/collegegoal_bz'
 
 Vue.use(Router)
 export default new Router({
@@ -50,6 +57,7 @@ export default new Router({
   {path: '/studyplan',component: studyplan,meta:{title:"学习计划"}},
   {path: '/mygrades',component: mygrades,meta:{title:"我的成绩"}},
   {path: '/lostsubject',component: lostsubject,meta:{title:"已挂科目"}},
+  {path: '/lost_xq',component: lost_xq,meta:{title:"挂科详情"}},
   {path: '/collegegoaldetail/collegegoaldetail',component: collegegoaldetail,redirect: '/collegegoal/collegegoaldetail-xq',meta:{title:"目标详情"},
     children:[{path: '/collegegoal/collegegoaldetail-xq',name: 'collegegoaldetail_xq',component: collegegoaldetail_xq},
              {path: '/collegegoal/collegegoaldetail-dt',name: 'collegegoaldetail_dt',component:collegegoaldetail_dt}]
@@ -67,6 +75,12 @@ export default new Router({
     children:[{path: '/find/find_mbgc_zrxq',name: 'mbgc_zr',component: mbgc_zr},
              {path: '/find/find_mbgc_zxxq',name: 'mbgc_zx',component: mbgc_zx}]
   },
+  {path: '/collegegoal/collegegoal_xg_end',component: collegegoal_xg_end,meta:{title:"设置提醒"}},
+  {path: '/collegegoal/collegegoal_xg_cyz',component: collegegoal_xg_cyz,meta:{title:"设置提醒"}},
+  {path: '/collegegoal/collegegoal_xg_yqcyz',component: collegegoal_xg_yqcyz,meta:{title:"邀请参与者"}},
+  {path: '/collegegoal/collegegoal_addcyz_xq',component: collegegoal_addcyz_xq,meta:{title:"邀请参与者"}},
+  {path: '/collegegoal/collegegoal_addcyz',component: collegegoal_addcyz,meta:{title:"参与者"}},
+  {path: '/collegegoal/collegegoal_bz',component: collegegoal_bz,meta:{title:"备注"}},
   {path: '/collegegoal_zmb',component: collegegoal_zmb,meta:{title:"子目标"}},
   {path: '/collegegoal_zmb_xq',component: collegegoal_zmb_xq,meta:{title:"子目标详情"}},
   {path: '/find_xymb',component: find_xymb,meta:{title:"学院目标"}},

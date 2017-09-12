@@ -11,8 +11,8 @@
 				</li>
 				<div v-show="dyxq" class="ygkm-list">
 					<ul>
-						<li><router-link to="">语文<span><img src="./../../../assets/image/next.png"></span></router-link></li>
-						<li><router-link to="">高数<span><img src="./../../../assets/image/next.png"></span></router-link></li>
+						<li @click="lostXqShow()"><a>语文<span><img src="./../../../assets/image/next.png"></span></a></li>
+						<li @click="lostXqShow()"><a>高数<span><img src="./../../../assets/image/next.png"></span></a></li>
 					</ul>
 				</div>
 				<li>
@@ -81,6 +81,11 @@
 				dyxq:false
 			}
 		},
+		methods:{
+			lostXqShow:function(){
+				this.$router.push('./lost_xq');
+			}
+		}
 	}
 </script>
 <style>
@@ -92,7 +97,7 @@
 		font-weight: bold;
 	}
 	.ygkm-wrapper{
-		background: #f2f2f2;
+		background: #f7f7f7;
 	}
 	.ygkm{
 		text-align: left;

@@ -4,37 +4,27 @@
           <ul>
               <li>
                   <h3>30天英语学习</h3>
-                  <span>
-                      <img src="./../../assets/image/jion.png">
-                  </span>
+                  <v-button></v-button>
                   <p>1243人参加</p>
               </li>
               <li>
                   <h3>健身运动</h3>
-                  <span>
-                      <img src="./../../assets/image/jion.png">
-                  </span>
+                  <v-button></v-button>
                   <p>1243人参加</p>
               </li>
               <li>
                   <h3>社会公益</h3>
-                  <span>
-                      <img src="./../../assets/image/jion.png">
-                  </span>
+                  <v-button></v-button>
                   <p>1243人参加</p>
               </li>
               <li>
                   <h3>软件工程师</h3>
-                  <span>
-                      <img src="./../../assets/image/jion.png">
-                  </span>
+                  <v-button></v-button>
                   <p>1243人参加</p>
               </li>
               <li>
                   <h3>高数100天</h3>
-                  <span>
-                      <img src="./../../assets/image/jion.png">
-                  </span>
+                  <v-button></v-button>
                   <p>1243人参加</p>
               </li>
           </ul>
@@ -43,9 +33,20 @@
 </template>
 
 <script>
-
+import tjmb_button from './mbgc_tjmb_button'
 export default {
+  components:{
+    'v-button':tjmb_button
+  },
+  props:{},
+  data() {
+    return {
 
+    }
+  },
+  methods:{
+
+  }
 }
 </script>
 

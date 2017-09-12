@@ -8,7 +8,7 @@
                     <img src="./../../../assets/image/next.png">
                 </span>
     	  	 	</div>
-    	  	 	<div class="setTime">
+    	  	 	<div class="setTime" >
         	 			<img src="./../../../assets/image/Set.png">
         	 			<p>5月26日  14:24</p>
                 <span>
@@ -22,21 +22,21 @@
                     <img src="./../../../assets/image/next.png">
                 </span>
     	  	 	</div>
-    	  	 	<div class="setMonth">
-      	  	 		<img src="./../../../assets/image/Update.png">
-      	 			  <p>每月</p>
-                <span>
-                    <img src="./../../../assets/image/next.png">
-                </span>
-    	  	 	</div>
-    	  	 	<div class="setEndtime">
+    	  	<!--    <div class="setMonth">
+                           <img src="./../../../assets/image/Update.png">
+                           <p>每月</p>
+                          <span>
+                              <img src="./../../../assets/image/next.png">
+                          </span>
+          </div> -->
+    	  	 	<div class="setEndtime" @click="endtimeShow()">
       	  	 		<img src="./../../../assets/image/Remind.png">
       	 			  <p>任务截止时提醒</p>
                 <span>
                     <img src="./../../../assets/image/next.png">
                 </span>
     	  	 	</div>
-    	  	 	<div class="addother">
+    	  	 	<div class="addother" @click="cyzShow()">
       	  	 		<img src="./../../../assets/image/touxiang.png">
       	  	 		<p>
         	  	 			<img src="./../../../assets/image/photo1.jpg">
@@ -101,6 +101,8 @@
 
 <script>
 import mbyxj from './mbyxj'
+require('./../../../../node_modules/mobiscroll/css/mobiscroll.wp-light.css');
+//require('./../../../../node_modules/mobiscroll/js/mobiscroll.scrollview.js');
 export default {
  /* props:{
     complete:{
@@ -122,6 +124,14 @@ export default {
     },
     completeHide() {
       this.mbyxjShow=false;
+    },
+    monthShow:function(){
+    },
+    endtimeShow:function(){
+    this.$router.push('./collegegoal_xg_end');
+    },
+    cyzShow:function(){
+    this.$router.push('./collegegoal_xg_cyz');
     }
   },
  /* created() {

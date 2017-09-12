@@ -1,18 +1,42 @@
 <template>
   <div class="mbgc-search-wrapper">
       <div class="mbgc-search" v-show="search">
-      <input type="text" name="search" placeholder="搜索" @click="searchShow()">
+          <input type="text" name="search" placeholder="搜索" @click="searchShow()">
       </div>
       <div class="mbgc-searchs" v-show="!search">
-      <input type="text" name="search" placeholder="搜索目标">
-      <button @click="searchShow()">确认</button>
-  </div>
+          <input type="text" name="search" placeholder="搜索目标">
+          <button>确认</button>
+      </div>
+      <div class="searchs-xq" v-show="!search">
+          <ul>
+              <li>
+                  <img src="./../../assets/image/photo1.jpg">
+                  <p>阿杰</p>
+                  <v-button></v-button>
+              </li>
+              <li>
+                  <img src="./../../assets/image/photo1.jpg">
+                  <p>阿杰</p>
+                  <v-button></v-button>
+              </li>
+              <li>
+                  <img src="./../../assets/image/photo1.jpg">
+                  <p>阿杰</p>
+                  <v-button></v-button>
+              </li>
+              <li>
+                  <img src="./../../assets/image/photo1.jpg">
+                  <p>阿杰</p>
+                  <v-button></v-button>
+              </li>
+          </ul>
+      </div>
   </div>
 
 </template>
 
 <script>
-
+import button from './../my/collegegoal/button_yq'
 export default {
   data() {
     return {
@@ -23,6 +47,9 @@ export default {
       searchShow() {
         this.search = !this.search;
       }
+  },
+  components:{
+    'v-button':button
   }
 }
 </script>
@@ -67,6 +94,26 @@ export default {
   background:rgba(0,0,0,0);
   border:none;
   vertical-align: middle;
+}
+.searchs-xq>p{
+  padding: 0 1.05em
+}
+.searchs-xq ul li{
+  padding: .3em 1.05em;
+  border-bottom: 1px solid #eeeeee;
+  background: white;
+}
+.searchs-xq ul li>img{
+  width: 2em;
+  height: 2em;
+  vertical-align: top;
+  border-radius: 6px;
+}
+.searchs-xq ul li p{
+  display: inline-block;
+  font-size: 16px;
+  color: #333333;
+  margin-top:.5em;
 }
 </style>
 

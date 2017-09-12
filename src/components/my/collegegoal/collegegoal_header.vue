@@ -8,7 +8,7 @@
  			<div class="collegedetail-input-img">
  				<img src="./../../../assets/image/Remarks.png">
  			</div>
- 			<div class="collegedetail-input-nr">
+ 			<div class="collegedetail-input-nr" @click="bzShow()">
  				<p>语言是交流的工具，英语还是无疑是世界上中重要的交流工具之一。学习是进步的阶梯，也是你开起世界大门的第一步，这里，我们将一起奋斗，一起努力，还是还是无疑是世界上最重要的工具之一</p>
  			</div>
  		</div>
@@ -34,6 +34,9 @@ export default {
 	methods:{
 		zmbShow:function(){
 			this.$router.push('./collegegoal_zmb');
+		},
+		bzShow:function(){
+			this.$router.push('./collegegoal_bz');
 		}
 	}
 }

@@ -93,7 +93,7 @@ export default {
 .find-xymb-wrapper .xymb-list ul li a>img{
   width: .8em;
   vertical-align: top;
-  margin-top: .1em;
+  margin-top: .25em;
 }
 .find-xymb-wrapper .xymb-list ul li a>span{
   display: inline-block;

@@ -55,6 +55,11 @@ export default {
 }
 .xymb-xq-wrapper .xymb-xq-button{
   text-align: center;
+  background: white;
+  position: fixed;
+  bottom:0;
+  height: 3em;
+  width: 100%
 }
 .xymb-xq-wrapper .xymb-xq-button button{
   width: 90%;
@@ -62,10 +67,13 @@ export default {
   font-family: AdobeHeitiStd-Regular;
   font-size: 18px;
   color: #fefefe;
-  padding: .5em 0;
+  padding: .6em 0 .4em;
   margin-bottom: .5em;
   border-radius: 5px;
   border:none;
+/*   bottom: 0;
+left: 50%; 
+  margin-left: -45%;*/
 }
 .xymb-xq-diagle{
   position:fixed;

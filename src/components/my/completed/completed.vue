@@ -28,7 +28,7 @@ export default {
 }
 .mbfl-item ul li{
 	display: inline-block;
-	width: calc(100%/2 - .2em);
+	width: calc(100%/2 - .5em);
 	padding: .23em 0 .125em;
 	border-bottom: 1px solid #ffffff;
 }

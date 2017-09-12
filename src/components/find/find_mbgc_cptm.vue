@@ -80,7 +80,7 @@
       </div>
       <div class="mbgc-cptm-buttons" v-show="sum>1">
           <button @click="preShow()">返回上一题</button>
-          <button @click="nextShow()">确认</button>
+         <!--  <button @click="nextShow()">确认</button> -->
       </div>
       <div class="mbgc-cptm-diagle" v-show="sum>17">
           <div class="mbgc-cptm-main">
@@ -112,11 +112,13 @@ export default {
       this.index=this.sum;
       this.selecedif = !this.selecedif;
       this.selecedelse = false;
+      this.sum++;
     },
     selecedElse:function(index) {
       this.index=this.sum;
       this.selecedif = false;
       this.selecedelse = !this.selecedelse;
+      this.sum++;
     },
     resultShow:function(){
       this.$router.push('./mbgc_result');
@@ -180,12 +182,22 @@ export default {
   border-radius: 5px;
 }
 .mbgc-cptm-wrapper .mbgc-cptm-buttons button{
+  width: 90%;
+  padding: .5em 0;
+  font-size: 18px;
+  color: white;
+  background: #E5E5E5;
+  border:none;
+  border-radius: 5px;
+
+}
+/* .mbgc-cptm-wrapper .mbgc-cptm-buttons button{
   width: calc(90%/2);
   padding: .5em 0;
   font-size: 18px;
   border:none;
-}
-.mbgc-cptm-wrapper .mbgc-cptm-buttons button:nth-child(1){
+} */
+/* .mbgc-cptm-wrapper .mbgc-cptm-buttons button:nth-child(1){
   background: #E5E5E5;
   color: #999999;
   border-top-left-radius: 5px;
@@ -196,7 +208,7 @@ export default {
   color: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-}
+} */
 .mbgc-cptm-wrapper .mbgc-cptm-diagle{
   background: rgba(0,0,0,0.5);
   position: absolute;

@@ -2,8 +2,9 @@
   <div class="zycp-result-wrapper">
     	<div class="zycp-result-title">
          <h3>您的霍兰德类型是：<span>RIS</span></h3> 
-         <img src="./../../assets/image/zxt.png"> 
+         <!-- <img src="./../../assets/image/zxt.png">  -->
       </div>
+      <v-hlldt></v-hlldt>
       <div class="zycp-result-jg">
           <h3>解读结果</h3>
           <p>霍兰德认为，个人职业兴趣特征与职业之间应有一种内在的对应关系。根据兴趣的不同，人格可分为研究性（I）、艺术性（A）、社会性（S）、企业型（E）、传统型（C）、现实型（R）六个维度，每个人的性格都是这六个维度的不同程度组合。</p>
@@ -15,7 +16,7 @@
 </template>
 
 <script>
-
+import hlldt from './find_zycp_ldt'
 export default {
   data() {
     return {}
@@ -24,6 +25,9 @@ export default {
     tjmbShow:function() {
       this.$router.push('./mbgc_tjmb');
     }
+  },
+  components:{
+    'v-hlldt':hlldt
   }
 }
 </script>

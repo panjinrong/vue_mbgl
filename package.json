@@ -10,8 +10,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "echarts": "^3.7.1",
+    "jquery": "^3.2.1",
+    "mobiscroll": "^3.0.0-beta6",
     "vue": "^2.3.3",
     "vue-router": "^2.6.0",
+    "vue-swipe": "^2.0.3",
     "vue-wechat-title": "^2.0.4"
   },
   "devDependencies": {

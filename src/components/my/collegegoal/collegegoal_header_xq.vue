@@ -11,7 +11,7 @@
 						<p>
 							<span><img src="./../../../assets/image/mb.png"></span><font>0/3</font>
 							<span><img src="./../../../assets/image/naozhong.png"></span>
-							<!-- <span><img src="./../../../assets/image/month.png"></span> -->
+							<span><img src="./../../../assets/image/month.png"></span>
 						</p>
 						
  					</div>
@@ -25,7 +25,7 @@
 						<p>
 							<span><img src="./../../../assets/image/mb.png"></span><font>0/3</font>
 							<span><img src="./../../../assets/image/naozhong.png"></span>
-							<!-- <span><img src="./../../../assets/image/month.png"></span> -->
+							<span><img src="./../../../assets/image/month.png"></span>
 						</p>
  					</div>
  				</li>
@@ -38,7 +38,7 @@
 						<p>
 							<span><img src="./../../../assets/image/mb.png"></span><font>0/3</font>
 							<span><img src="./../../../assets/image/naozhong.png"></span>
-							<!-- <span><img src="./../../../assets/image/month.png"></span> -->
+							<span><img src="./../../../assets/image/month.png"></span>
 						</p>
  					</div>
  				</li>
